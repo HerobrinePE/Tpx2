@@ -297,10 +297,10 @@ async def urban(*msg):
     except:
         await client.say(config.err_mesg)
 
-
+"""
 @client.command(pass_context=True, aliases=['ytid'])
 async def youtubeid(ctx, *, channelid):
-    """Gets statistics for a YouTube channel using ID."""
+    Gets statistics for a YouTube channel using ID.
     try:
         # Make requests to YouTube API and grab info
         data = urllib.request.urlopen("https://www.googleapis.com/youtube/v3/channels?part=statistics&id=" + channelid + "&key=" + config.key).read()
@@ -324,7 +324,7 @@ async def youtubeid(ctx, *, channelid):
 
 @client.command(pass_context=True, aliases=['ytstats'])
 async def youtube(ctx, *, name):
-    """Gets statistics for a YouTube channel."""
+    Gets statistics for a YouTube channel.
     try:
         # Make requests to YouTube API and grab info
         data = urllib.request.urlopen("https://www.googleapis.com/youtube/v3/channels?part=statistics&forUsername="+name+"&key="+config.key).read()
@@ -344,7 +344,7 @@ async def youtube(ctx, *, name):
     except:
         await client.say(config.err_mesg)
 
-
+"""
 
 @client.command(pass_context=True)
 async def load():
